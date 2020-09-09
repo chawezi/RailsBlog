@@ -1,0 +1,21 @@
+<h1>Blog Posts</h1>
+
+
+	<table class="table" border="1">
+		<tr>
+			<th>#</th>
+			<th>Title</th>
+			<th>Body</th>
+		</tr>
+		<% x=0 %>
+		<% @posts.each do |post| %>
+		<% x +=1 %>
+
+		<tr>
+			<td><%= x %></td>
+			<td><%= post.title %></td>
+			<td><%= post.body %></td>
+			<td><%= link_to "View Details", post_path(post) %></td>
+		</tr>
+		<% end %>
+	</table>
