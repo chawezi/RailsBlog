@@ -3493,3 +3493,420 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 4211)
 
 
+Started GET "/" for 127.0.0.1 at 2020-09-10 11:46:50 +0200
+  [1m[35m (123.5ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 40.7ms | Allocations: 1045)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 596ms (Views: 549.1ms | ActiveRecord: 0.5ms | Allocations: 5715)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2020-09-10 11:46:53 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 58.3ms | Allocations: 914)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.0ms | Allocations: 4429)
+
+
+Started POST "/posts" for 127.0.0.1 at 2020-09-10 11:46:55 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"tNNPOK46w5UOxYAxjJbvXrQqnXb3hUCk9txTSge3Qz4PhWT4crntOh4fj02xDrrhgJkvE+TBD+18BDfGxSNbQg==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1144)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.0ms | Allocations: 3324)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2)):
+    1: <h1>Add New Post</h1>
+    2: <%= form_for :post, url: posts_path do |f| %>
+    3: 	<% if @post.errors.any? %>
+    4: 		<% @post.errors.full_message.each do |msg| %>
+    5: 			<%= msg %>
+    6: 		<% end %>
+    7: 	<% end %>
+  
+app/views/posts/new.html.erb:4
+app/views/posts/new.html.erb:2
+app/controllers/posts_controller.rb:21:in `create'
+Started POST "/posts" for 127.0.0.1 at 2020-09-10 11:49:21 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"tNNPOK46w5UOxYAxjJbvXrQqnXb3hUCk9txTSge3Qz4PhWT4crntOh4fj02xDrrhgJkvE+TBD+18BDfGxSNbQg==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 851)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 17.9ms | Allocations: 6179)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2)):
+    1: <h1>Add New Post</h1>
+    2: <%= form_for :post, url: posts_path do |f| %>
+    3: 	<% if @post.errors.any? %>
+    4: 		<% @post.errors.full_message.each do |msg| %>
+    5: 			<%= msg %>
+    6: 		<% end %>
+    7: 	<% end %>
+  
+app/views/posts/new.html.erb:4
+app/views/posts/new.html.erb:2
+app/controllers/posts_controller.rb:21:in `create'
+Started GET "/posts/new" for 127.0.0.1 at 2020-09-10 11:49:25 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 652)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 4076)
+
+
+Started POST "/posts" for 127.0.0.1 at 2020-09-10 11:49:26 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"vwaHm55hsjTadgwvxiCq4HStwPkkVd6UQTRr7fYSicJtnHAV7VFFAHC3YSwlOnGCYRPK/Vi5hy2nWl6acaZTgA==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 846)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2432)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 2)):
+    1: <h1>Add New Post</h1>
+    2: <%= form_for :post, url: posts_path do |f| %>
+    3: 	<% if @post.errors.any? %>
+    4: 		<% @post.errors.full_message.each do |msg| %>
+    5: 			<%= msg %>
+    6: 		<% end %>
+    7: 	<% end %>
+  
+app/views/posts/new.html.erb:4
+app/views/posts/new.html.erb:2
+app/controllers/posts_controller.rb:21:in `create'
+Started POST "/posts" for 127.0.0.1 at 2020-09-10 11:51:54 +0200
+Processing by PostsController#create as HTML
+  Parameters: {"authenticity_token"=>"vwaHm55hsjTadgwvxiCq4HStwPkkVd6UQTRr7fYSicJtnHAV7VFFAHC3YSwlOnGCYRPK/Vi5hy2nWl6acaZTgA==", "post"=>{"title"=>"", "body"=>""}, "commit"=>"Save Post"}
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 853)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 6585)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2020-09-10 11:52:02 +0200
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 643)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 4012)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-10 11:52:04 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1066)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 4628)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 11:52:06 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (64.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 18.4ms | Allocations: 248)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 110ms (Views: 25.1ms | ActiveRecord: 64.5ms | Allocations: 8392)
+
+
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (27.1ms)[0m  [1m[34mSELECT GET_LOCK('8536980426618662865', 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateComments (20200910095644)
+  [1m[35m (288.9ms)[0m  [1m[35mCREATE TABLE `comments` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `username` varchar(255), `body` text, `post_id` bigint NOT NULL, `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL,  INDEX `index_comments_on_post_id`  (`post_id`), CONSTRAINT `fk_rails_2fd19c0db7`
+FOREIGN KEY (`post_id`)
+  REFERENCES `posts` (`id`)
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20200910095644')[0m
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('8536980426618662865')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 12:03:14 +0200
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 251)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 196ms (Views: 165.4ms | ActiveRecord: 0.2ms | Allocations: 18994)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 12:05:24 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 83.9ms | Allocations: 15310)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 91ms (Views: 88.2ms | ActiveRecord: 1.5ms | Allocations: 20499)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 12:07:09 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1151)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 6435)
+
+
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 12:07:50 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1262)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 6544)
+
+
+Started POST "/posts/4/comments" for 127.0.0.1 at 2020-09-10 12:07:58 +0200
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for CommentsController):
+  
+actionpack (6.0.3.2) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.2) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 12:13:25 +0200
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8mb4,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3248)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 8736)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Post:0x00007f732054da90>
+Did you mean?  comments
+               comments=):
+     5: <%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: 'Are you sure you want to delete'}, :class => 'btn btn-sm btn-outline-danger btn_delete'  %>
+     6: <hr>
+     7: <h3>Comments</h3>
+     8: <% @post.comment.each do |comment| %>
+     9: 	<%= comment.username %>
+    10: 	<%= comment.body %>
+    11: <% end %>
+  
+app/views/posts/show.html.erb:8
+Started GET "/posts/4" for 127.0.0.1 at 2020-09-10 12:14:10 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 4 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2907)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms | Allocations: 7701)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Post:0x00007f732404f080>
+Did you mean?  comments
+               comments=):
+     5: <%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: 'Are you sure you want to delete'}, :class => 'btn btn-sm btn-outline-danger btn_delete'  %>
+     6: <hr>
+     7: <h3>Comments</h3>
+     8: <% @post.comment.each do |comment| %>
+     9: 	<%= comment.username %>
+    10: 	<%= comment.body %>
+    11: <% end %>
+  
+app/views/posts/show.html.erb:8
+Started GET "/" for 127.0.0.1 at 2020-09-10 12:14:13 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1042)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 5175)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-10 12:14:14 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.1ms | Allocations: 4282)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-10 12:14:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 4265)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-10 12:14:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 4278)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-10 12:14:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 4269)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-10 12:14:15 +0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts`[0m
+  ↳ app/views/posts/index.html.erb:11
+  Rendered posts/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 832)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms | Allocations: 4265)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2020-09-10 12:14:18 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2910)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 3911)
+
+
+  
+ActionView::Template::Error (undefined method `comment' for #<Post:0x00007f7318129250>
+Did you mean?  comments
+               comments=):
+     5: <%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: 'Are you sure you want to delete'}, :class => 'btn btn-sm btn-outline-danger btn_delete'  %>
+     6: <hr>
+     7: <h3>Comments</h3>
+     8: <% @post.comment.each do |comment| %>
+     9: 	<%= comment.username %>
+    10: 	<%= comment.body %>
+    11: <% end %>
+  
+app/views/posts/show.html.erb:8
+Started GET "/posts/7" for 127.0.0.1 at 2020-09-10 12:14:47 +0200
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/posts_controller.rb:7:in `show'
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mComment Load (72.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`post_id` = 7[0m
+  ↳ app/views/posts/show.html.erb:8
+  Rendered posts/show.html.erb within layouts/application (Duration: 96.9ms | Allocations: 11955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 36.5ms | ActiveRecord: 74.0ms | Allocations: 17145)
+
+
+Started POST "/posts/7/comments" for 127.0.0.1 at 2020-09-10 12:15:05 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"e0edmIj9M+4ivsZEKsCXaLw5WwPVXFTNPItY4N4uDg+p3WoW+83E2oh/q0fJ2kwKqYdRB6mwDXTa5W2XWZrUTQ==", "comment"=>{"username"=>"Hehehe", "body"=>"Is that the best thing you can do?"}, "commit"=>"Create Comment", "post_id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 2484)
+
+
+  
+NoMethodError (undefined method `comments' for #<Array:0x00007f730c015fc8>):
+  
+app/controllers/comments_controller.rb:4:in `create'
+Started POST "/posts/7/comments" for 127.0.0.1 at 2020-09-10 12:15:22 +0200
+Processing by CommentsController#create as HTML
+  Parameters: {"authenticity_token"=>"e0edmIj9M+4ivsZEKsCXaLw5WwPVXFTNPItY4N4uDg+p3WoW+83E2oh/q0fJ2kwKqYdRB6mwDXTa5W2XWZrUTQ==", "comment"=>{"username"=>"Hehehe", "body"=>"Is that the best thing you can do?"}, "commit"=>"Create Comment", "post_id"=>"7"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT `posts`.* FROM `posts` WHERE `posts`.`id` = 7 LIMIT 1[0m
+  ↳ app/controllers/comments_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms | Allocations: 5998)
+
+
+  
+NoMethodError (undefined method `comment' for #<Array:0x00007f7320841bc0>):
+  
+app/controllers/comments_controller.rb:4:in `create'

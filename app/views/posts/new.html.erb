@@ -1,11 +1,6 @@
 <h1>Add New Post</h1>
 <%= form_for :post, url: posts_path do |f| %>
-	<% if @post.errors.any? %>
-		<% @post.errors.full_message.each do |msg| %>
-			<%= msg %>
-		<% end %>
-	<% end %>
-
+	
 	<p>
 		<%= f.label :title %>
 		<%= f.text_field :title %>
